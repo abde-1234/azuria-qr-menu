@@ -1,0 +1,6 @@
+{
+  "name": "AZURIA — Restaurant de Poissons | Menu Digital",
+  "description": "Découvrez le menu digital d’AZURIA : poissons frais, fruits de mer, grillades et spécialités de l’Atlantique.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

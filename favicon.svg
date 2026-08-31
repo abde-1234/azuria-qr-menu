@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="16" fill="#092C3E"/>
+  <!-- Moroccan Arch & Wave Logo -->
+  <path d="M32 10C24 10 18 17 18 26V48C18 50 19.5 51.5 21.5 51.5H42.5C44.5 51.5 46 50 46 48V26C46 17 40 10 32 10Z" stroke="#118A96" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+  <!-- Pointed Arch Crown -->
+  <path d="M32 8L34.5 12.5H29.5L32 8Z" fill="#E56A54"/>
+  <!-- Letter A crossbar / wave -->
+  <path d="M22 34Q27 30 32 34Q37 38 42 34" stroke="#118A96" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Ocean Waves below -->
+  <path d="M22 42Q27 38 32 42Q37 46 42 42" stroke="#E56A54" stroke-width="2" stroke-linecap="round"/>
+  <path d="M25 48Q28.5 45 32 48Q35.5 51 39 48" stroke="#DDEFE9" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

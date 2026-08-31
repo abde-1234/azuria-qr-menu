@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>AZURIA — Restaurant de Poissons | Menu Digital</title>
+  <meta name="description" content="Découvrez le menu digital d’AZURIA : poissons frais, fruits de mer, grillades et spécialités de l’Atlantique." />
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="AZURIA — Restaurant de Poissons | Menu Digital" />
+  <meta property="og:description" content="Découvrez le menu digital d’AZURIA : poissons frais, fruits de mer, grillades et spécialités de l’Atlantique." />
+  <meta property="og:image" content="assets/images/hero-azuria-seafood.webp" />
+  <meta property="og:type" content="restaurant.menu" />
+  <meta name="theme-color" content="#092C3E" />
+  <link rel="canonical" href="https://azuria-restaurant.com" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <!-- Preload Hero Image -->
+  <link rel="preload" as="image" href="assets/images/hero-azuria-seafood.webp" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SeafoodRestaurant",
+    "name": "AZURIA",
+    "image": "assets/images/hero-azuria-seafood.webp",
+    "description": "Restaurant de poissons frais, fruits de mer et grillades de l’Atlantique.",
+    "servesCuisine": ["Seafood", "Moroccan", "Mediterranean"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Corniche",
+      "addressLocality": "Casablanca",
+      "addressCountry": "MA"
+    },
+    "openingHours": "Mo-Su 12:00-00:00",
+    "priceRange": "$$",
+    "telephone": "+212 6 00 00 00 00"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header
+       ======================================================================== -->
+  <header class="site-header" id="mainHeader">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Brand Logo & Name -->
+        <a href="#heroSection" class="brand-wrap" aria-label="AZURIA Accueil">
+          <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Moroccan pointed arch -->
+            <path d="M32 6C23 6 16 14 16 25V54H48V25C48 14 41 6 32 6Z" stroke="#092C3E" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M32 4L35 9H29L32 4Z" fill="#E56A54"/>
+            <!-- Wave letter A crossbar -->
+            <path d="M20 36Q26 31 32 36Q38 41 44 36" stroke="#118A96" stroke-width="3" stroke-linecap="round"/>
+            <!-- Atlantic Ocean waves -->
+            <path d="M20 44Q26 39 32 44Q38 49 44 44" stroke="#E56A54" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M23 50Q27.5 46 32 50Q36.5 54 41 50" stroke="#0F7080" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <div class="brand-text">
+            <span class="brand-name">AZURIA</span>
+            <span class="brand-subtitle">POISSONS & SAVEURS</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Navigation principale">
+          <a href="#heroSection" class="nav-link" data-i18n="nav_home">Accueil</a>
+          <a href="#menuSection" class="nav-link" data-i18n="nav_menu">Menu</a>
+          <a href="#menuSection" class="nav-link" data-i18n="nav_specialties">Spécialités</a>
+          <a href="#contactSection" class="nav-link" data-i18n="nav_contact">Contact</a>
+        </nav>
+
+        <!-- Header Actions: Language & Mobile Drawer & Cart -->
+        <div class="header-actions">
+          <!-- Language Switcher -->
+          <div class="lang-switch-wrap" role="group" aria-label="Choix de langue">
+            <button type="button" class="lang-btn js-lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+            <button type="button" class="lang-btn js-lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+          </div>
+
+          <!-- Header Cart Button (Desktop & Tablet) -->
+          <button type="button" class="header-icon-btn js-open-cart" id="headerCartBtn" aria-label="Ouvrir le panier">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="badge-counter" id="cartBadgeHeader" style="display: none;">0</span>
+          </button>
+
+          <!-- Hamburger Button (Mobile) -->
+          <button type="button" class="header-icon-btn" id="hamburgerBtn" aria-label="Ouvrir le menu de navigation">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       Hero Section
+       ======================================================================== -->
+  <section class="hero-section" id="heroSection">
+    <div class="hero-media-wrap">
+      <img 
+        src="assets/images/hero-azuria-seafood.webp" 
+        alt="Plateau de fruits de mer et poissons grillés AZURIA" 
+        class="hero-bg-img"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+      />
+      <div class="hero-overlay-gradient"></div>
+    </div>
+
+    <!-- Moroccan Arch Content Panel -->
+    <div class="hero-arch-container">
+      <div class="hero-arch-card">
+        <!-- Moroccan Star Emblem -->
+        <svg class="hero-star-emblem" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z"/>
+        </svg>
+        <h1 class="hero-arch-title" data-i18n="hero_title">
+          La fraîcheur de l’Atlantique dans votre assiette.
+        </h1>
+        <!-- Subtle Wave Divider -->
+        <svg class="hero-wave-ornament" viewBox="0 0 60 8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M0 4C7.5 0.5 7.5 7.5 15 4C22.5 0.5 22.5 7.5 30 4C37.5 0.5 37.5 7.5 45 4C52.5 0.5 52.5 7.5 60 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <a href="#menuSection" class="hero-cta-btn">
+          <span data-i18n="hero_cta">Découvrir le menu</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Search Bar Section
+       ======================================================================== -->
+  <section class="search-section" aria-label="Recherche">
+    <div class="container">
+      <div class="search-bar-wrap">
+        <svg class="search-icon-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input 
+          type="search" 
+          id="searchInput" 
+          class="search-input" 
+          placeholder="Rechercher un plat..." 
+          data-i18n="search_placeholder"
+          aria-label="Rechercher un plat dans le menu"
+          autocomplete="off"
+        />
+        <button type="button" class="clear-search-btn" id="clearSearchBtn" aria-label="Effacer la recherche">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Sticky Category Navigation
+       ======================================================================== -->
+  <nav class="category-nav-section" aria-label="Catégories du menu">
+    <div class="container">
+      <div class="category-scroll-container" id="categoryNav">
+        <!-- Dynamically rendered pills -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================================================
+       Menu Section & Cards Grid
+       ======================================================================== -->
+  <main class="menu-section" id="menuSection">
+    <div class="container">
+      <!-- Grid Container -->
+      <div class="menu-grid" id="menuGrid" role="region" aria-live="polite">
+        <!-- Dynamically rendered dishes -->
+      </div>
+
+      <!-- Empty State -->
+      <div class="empty-state" id="emptyState">
+        <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+          <line x1="9" y1="9" x2="9.01" y2="9"></line>
+          <line x1="15" y1="9" x2="15.01" y2="9"></line>
+        </svg>
+        <p class="empty-state-text" id="emptyStateText" data-i18n="no_results">
+          Aucun plat ne correspond à votre recherche.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       Restaurant Info / Contact Section
+       ======================================================================== -->
+  <section class="contact-section" id="contactSection">
+    <div class="container">
+      <div class="section-header-center">
+        <h2 class="section-title" data-i18n="contact_title">Nous Trouver & Réserver</h2>
+        <p class="section-subtitle" data-i18n="contact_subtitle">Une expérience culinaire iodée face à l'océan</p>
+      </div>
+
+      <div class="contact-card-grid">
+        <!-- Address -->
+        <div class="contact-info-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <span class="contact-card-label" data-i18n="address_label">Adresse</span>
+          <p class="contact-card-val js-rest-address">Corniche, Casablanca, Maroc</p>
+        </div>
+
+        <!-- Hours -->
+        <div class="contact-info-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <span class="contact-card-label" data-i18n="hours_label">Horaires</span>
+          <p class="contact-card-val js-rest-hours">Tous les jours : 12h00 – 00h00</p>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-info-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+          </div>
+          <span class="contact-card-label" data-i18n="phone_label">Téléphone</span>
+          <a href="#" class="contact-card-val js-rest-phone">+212 6 00 00 00 00</a>
+        </div>
+
+        <!-- WhatsApp -->
+        <div class="contact-info-card">
+          <div class="contact-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </div>
+          <span class="contact-card-label" data-i18n="whatsapp_label">WhatsApp</span>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="contact-card-val js-rest-whatsapp">+212 6 00 00 00 00</a>
+        </div>
+      </div>
+
+      <div class="map-btn-wrap">
+        <a href="#" target="_blank" rel="noopener noreferrer" class="maps-cta-btn js-rest-map">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+            <line x1="8" y1="2" x2="8" y2="18"></line>
+            <line x1="16" y1="6" x2="16" y2="22"></line>
+          </svg>
+          <span data-i18n="maps_button">Ouvrir dans Google Maps</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <svg class="footer-logo" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M32 6C23 6 16 14 16 25V54H48V25C48 14 41 6 32 6Z" stroke="#DDEFE9" stroke-width="2.5" stroke-linejoin="round"/>
+            <path d="M32 4L35 9H29L32 4Z" fill="#E56A54"/>
+            <path d="M20 36Q26 31 32 36Q38 41 44 36" stroke="#118A96" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M20 44Q26 39 32 44Q38 49 44 44" stroke="#E56A54" stroke-width="2" stroke-linecap="round"/>
+            <path d="M23 50Q27.5 46 32 50Q36.5 54 41 50" stroke="#0F7080" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="footer-brand-name">AZURIA</span>
+          <span class="footer-brand-subtitle">POISSONS & SAVEURS</span>
+        </div>
+
+        <p class="footer-contact-summary">
+          <span class="js-rest-address">Corniche, Casablanca, Maroc</span> • <span class="js-rest-hours">Tous les jours : 12h00 – 00h00</span>
+        </p>
+
+        <!-- Social Media Placeholders -->
+        <div class="footer-social-links" aria-label="Réseaux sociaux">
+          <a href="#" class="social-icon-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="#" class="social-icon-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="social-icon-btn js-rest-whatsapp" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AZURIA. <span data-i18n="rights_reserved">Tous droits réservés.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       Dish Details Modal
+       ======================================================================== -->
+  <div class="modal-wrapper" id="dishModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-content-card">
+      <button type="button" class="modal-close-btn js-close-modal" aria-label="Fermer la modal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-img-wrap">
+        <img src="" alt="" id="modalDishImg" class="modal-img" />
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-dish-header">
+          <h2 class="modal-dish-title" id="modalDishTitle">Nom du Plat</h2>
+          <button type="button" class="modal-fav-btn" id="modalFavBtn" aria-label="Ajouter aux favoris">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-dish-status">
+          <span class="dish-status available" id="modalDishStatus">Disponible en cuisine</span>
+        </div>
+
+        <p class="modal-dish-desc" id="modalDishDesc">Description détaillée du plat...</p>
+
+        <div class="modal-dish-actions">
+          <div class="qty-selector" aria-label="Sélecteur de quantité">
+            <button type="button" class="qty-btn" id="modalQtyMinus" aria-label="Diminuer">-</button>
+            <span class="qty-val" id="modalQtyValue">1</span>
+            <button type="button" class="qty-btn" id="modalQtyPlus" aria-label="Augmenter">+</button>
+          </div>
+
+          <button type="button" class="modal-add-btn" id="modalAddToCartBtn">
+            <span data-i18n="add_to_cart">Ajouter au panier</span>
+            <span class="modal-dish-price" id="modalDishPrice">0 DH</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Shopping Cart Drawer
+       ======================================================================== -->
+  <div class="cart-drawer-wrapper" id="cartDrawer" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <div class="cart-drawer-panel">
+      <div class="cart-header">
+        <h3 class="cart-title" data-i18n="cart_title">Mon Panier</h3>
+        <button type="button" class="header-icon-btn js-close-cart" aria-label="Fermer le panier">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-items-container" id="cartItemsList">
+        <!-- Dynamically rendered cart items -->
+      </div>
+
+      <p class="cart-empty-msg" id="cartEmptyMsg" data-i18n="empty_cart">
+        Votre panier est vide.
+      </p>
+
+      <div class="cart-footer">
+        <div class="cart-summary-row">
+          <span class="cart-total-label" data-i18n="total">Total</span>
+          <span class="cart-total-value" id="cartTotalAmount">0 DH</span>
+        </div>
+        <div class="cart-actions">
+          <button type="button" class="checkout-whatsapp-btn" id="checkoutWhatsappBtn">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            <span data-i18n="order_whatsapp">Commander via WhatsApp</span>
+          </button>
+          <button type="button" class="clear-cart-btn" id="clearCartBtn" data-i18n="cart_clear">
+            Vider le panier
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Mobile Navigation Drawer
+       ======================================================================== -->
+  <div class="mobile-drawer-wrapper" id="mobileDrawer" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-drawer-panel">
+      <div class="drawer-top">
+        <div class="brand-wrap">
+          <span class="brand-name">AZURIA</span>
+        </div>
+        <button type="button" class="header-icon-btn js-close-drawer" aria-label="Fermer le menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="drawer-links" aria-label="Menu mobile">
+        <a href="#heroSection" class="drawer-nav-item js-close-drawer" data-i18n="nav_home">Accueil</a>
+        <a href="#menuSection" class="drawer-nav-item js-close-drawer" data-i18n="nav_menu">Menu</a>
+        <a href="#menuSection" class="drawer-nav-item js-close-drawer" data-i18n="nav_specialties">Spécialités</a>
+        <a href="#contactSection" class="drawer-nav-item js-close-drawer" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <div class="drawer-contact-box">
+        <p class="drawer-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span class="js-rest-address">Corniche, Casablanca, Maroc</span>
+        </p>
+        <p class="drawer-contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span class="js-rest-hours">12h00 – 00h00</span>
+        </p>
+        <a href="#" class="drawer-contact-link js-rest-phone">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>+212 6 00 00 00 00</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       Mobile Bottom Floating Navigation Bar
+       ======================================================================== -->
+  <nav class="bottom-floating-nav" aria-label="Navigation rapide">
+    <button type="button" class="bottom-nav-item active" id="bottomNavMenu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 18h16"></path>
+        <path d="M4 14h16"></path>
+        <path d="M4 10h16"></path>
+        <path d="M12 2a8 8 0 0 1 8 8H4a8 8 0 0 1 8-8z"></path>
+      </svg>
+      <span data-i18n="bottom_menu">Menu</span>
+    </button>
+
+    <button type="button" class="bottom-nav-item" id="bottomNavFavorites">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+      </svg>
+      <span class="badge-counter" id="favBadgeBottom" style="display: none;">0</span>
+      <span data-i18n="bottom_favorites">Favoris</span>
+    </button>
+
+    <button type="button" class="bottom-nav-item js-open-cart" id="bottomNavCart">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <path d="M16 10a4 4 0 0 1-8 0"></path>
+      </svg>
+      <span class="badge-counter" id="cartBadgeBottom" style="display: none;">0</span>
+      <span data-i18n="bottom_cart">Panier</span>
+    </button>
+  </nav>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <!-- JavaScript Engine -->
+  <script src="script.js"></script>
+</body>
+</html>
